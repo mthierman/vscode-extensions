@@ -1,5 +1,7 @@
 import { resolve } from "node:path";
-import { Theme } from "vscode-extensions";
+import { Theme, namedColors } from "vscode-extensions";
+
+console.log(namedColors.rebeccapurple);
 
 const theme = new Theme(
     "Test",
