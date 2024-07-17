@@ -4,9 +4,15 @@
     "private": true,
     "type": "module",
     "publisher": "mthierman",
-    "main": "index.js",
+    "exports": {
+        ".": "./main.js",
+        "./test": "./test.js"
+    },
     "scripts": {
-        "check": "tsc --noEmit"
+        "check": "tsc --noEmit",
+        "red": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/red.js",
+        "test": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/test.js",
+        "watch": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/watch.js"
     },
     "devDependencies": {
         "@types/node": "^20.14.11",
