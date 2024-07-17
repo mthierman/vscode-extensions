@@ -1,10 +1,12 @@
 import { ColorConstructor, ColorSpace, parse, serialize, sRGB } from "colorjs.io/fn";
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import type { NamedColor, WorkbenchColors } from "./type.mjs";
+import workbenchColors from "../schema/workbench_colors.json" with { type: "json" };
+import type { Color } from "./colors.mjs";
 
-type HexColor = string & { hexish?: unknown };
-type Color = { color: NamedColor | HexColor; alpha?: number };
+const modes = ["Light", "Dark"] as const;
+export type Mode = (typeof modes)[number];
+export type WorkbenchColors = Partial<Record<keyof typeof workbenchColors.properties, string>>;
 
 const parseColor = (color: Color) => {
     const parsed = parse(color.color);

@@ -149,3 +149,7 @@ export const namedColors = {
     yellow: "#ffff00",
     yellowgreen: "#9acd32",
 };
+
+export type NamedColor = keyof typeof namedColors;
+export type HexColor = `#{string}`;
+export type Color = { color: NamedColor | HexColor; alpha?: number };
