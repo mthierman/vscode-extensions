@@ -1,7 +1,6 @@
 import { ColorConstructor, ColorSpace, parse, serialize, sRGB } from "colorjs.io/fn";
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import manifest from "../../package.json" with { type: "json" };
 import type { NamedColor, WorkbenchColors } from "../modules/types.mjs";
 
 type HexColor = string & { hexish?: unknown };
