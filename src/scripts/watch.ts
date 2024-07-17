@@ -42,7 +42,7 @@ try {
 
         setTimeout(() => {
             watching = false;
-        }, 10);
+        }, 50);
     }
 } catch (error) {
     console.log(error);

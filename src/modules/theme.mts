@@ -108,7 +108,7 @@ export class Theme<T extends Record<string, Color>> {
         return JSON.stringify(theme, null, 4);
     };
 
-    save = async (outdir: string) => {
+    save = async (outdir: string = resolve(".", "themes")) => {
         await mkdir(outdir, { recursive: true });
         await writeFile(resolve(outdir, this.#outfile), this.#generate());
     };
