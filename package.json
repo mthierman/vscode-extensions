@@ -4,6 +4,9 @@
     "private": true,
     "type": "module",
     "publisher": "mthierman",
+    "bin": {
+        "vscode-extensions": "dist/cli.js"
+    },
     "exports": {
         "./theme": "./dist/theme.mjs"
     },
