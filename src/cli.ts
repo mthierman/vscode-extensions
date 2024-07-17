@@ -1,1 +1,3 @@
-console.log("bin");
+import chalk from "chalk";
+
+console.log(chalk.greenBright("Extension cli:"));
