@@ -5,7 +5,7 @@
     "type": "module",
     "publisher": "mthierman",
     "exports": {
-        ".": "./dist/theme.mjs"
+        "./theme": "./dist/theme.mjs"
     },
     "scripts": {
         "check": "tsc --noEmit",
