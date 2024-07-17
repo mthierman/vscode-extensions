@@ -1,12 +1,9 @@
 import { ColorConstructor } from "colorjs.io/fn";
-import type { NamedColor, WorkbenchColors } from "./type.mjs";
-type HexColor = string & {
-    hexish?: unknown;
-};
-type Color = {
-    color: NamedColor | HexColor;
-    alpha?: number;
-};
+import workbenchColors from "../schema/workbench_colors.json";
+import type { Color } from "./colors.mjs";
+declare const modes: readonly ["Light", "Dark"];
+export type Mode = (typeof modes)[number];
+export type WorkbenchColors = Partial<Record<keyof typeof workbenchColors.properties, string>>;
 export declare class Theme<T extends Record<string, Color>> {
     #private;
     constructor(name: string, colors: T, semanticHighlighting?: boolean);
