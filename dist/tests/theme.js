@@ -1,5 +1,5 @@
 import { resolve } from "node:path";
-import { Theme } from "../modules/theme.mjs";
+import { Theme } from "vscode-extensions";
 const theme = new Theme("Test", {
     background: { color: "black" },
     background2: { color: "black" },

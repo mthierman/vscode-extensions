@@ -1,6 +1,5 @@
 import { ColorConstructor } from "colorjs.io/fn";
-import { namedColors } from "./color.d.mts";
-import type { NamedColor, WorkbenchColors } from "./types.d.mts";
+import type { NamedColor, WorkbenchColors } from "./type.mjs";
 type HexColor = string & {
     hexish?: unknown;
 };
@@ -18,5 +17,5 @@ export declare class Theme<T extends Record<string, Color>> {
     semanticTokenColors: (semanticTokenColors: Record<string, string>) => void;
     save: (outdir?: string) => Promise<void>;
 }
-export { namedColors };
+export {};
 //# sourceMappingURL=theme.d.mts.map
