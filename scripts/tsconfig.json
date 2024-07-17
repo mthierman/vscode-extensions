@@ -1,4 +1,5 @@
 {
+    "files": ["../schema/workbench_colors.json"],
     "extends": "../tsconfig.base.json",
-    "compilerOptions": { "composite": true }
+    "compilerOptions": {}
 }
