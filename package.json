@@ -5,10 +5,13 @@
     "type": "module",
     "publisher": "mthierman",
     "bin": {
-        "vscode-extensions": "dist/src/cli.js"
+        "vscode-extensions": "dist/scripts/cli.js"
     },
     "exports": {
-        "./theme": "./dist/src/theme.mjs"
+        ".": {
+            "types": "./dist/modules/theme.d.mts",
+            "default": "./dist/modules/theme.mjs"
+        }
     },
     "scripts": {
         "check": "tsc --noEmit",
