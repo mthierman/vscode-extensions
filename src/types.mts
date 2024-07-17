@@ -1,4 +1,4 @@
-import workbenchColors from "../../schema/workbench_colors.json" with { type: "json" };
+import workbenchColors from "../schema/workbench_colors.json" with { type: "json" };
 import { namedColors } from "./color.mjs";
 
 export const modes = ["Light", "Dark"] as const;
