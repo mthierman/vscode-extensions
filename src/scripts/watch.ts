@@ -11,7 +11,7 @@ function build() {
     console.log(
         `Watching ${watchFolder}... ${new Date().toLocaleTimeString("en-US", { hour12: false })}`,
     );
-    exec(`pnpm test`);
+    exec(`pnpm build`);
 }
 
 const cli = createInterface(stdin, stdout);

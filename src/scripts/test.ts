@@ -1,3 +1,4 @@
+import { resolve } from "node:path";
 import { Theme } from "../modules/theme.mjs";
 
 const theme = new Theme(
@@ -231,4 +232,5 @@ theme.semanticTokenColors({
     numberLiteral: "#b5cea8",
 });
 
-await theme.save();
+const outdir = resolve(import.meta.dirname, "..", "..", "themes");
+await theme.save(outdir);

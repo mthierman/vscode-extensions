@@ -1,4 +1,5 @@
 import { ColorConstructor, ColorSpace, parse, serialize, sRGB } from "colorjs.io/fn";
+import { PathLike } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import type { NamedColor, WorkbenchColors } from "../modules/types.mjs";
@@ -32,6 +33,7 @@ export class Theme<T extends Record<string, Color>> {
     constructor(name: string, colors: T, semanticHighlighting: boolean = true) {
         ColorSpace.register(sRGB);
         this.#name = name;
+        this.#outfile = `${this.#name.replace(" ", "-").toLowerCase()}-color-theme.json`;
         this.#semanticHighlighting = semanticHighlighting;
         this.#colors = parseInit(colors);
         this.#workbenchColors = {};
@@ -40,6 +42,7 @@ export class Theme<T extends Record<string, Color>> {
     }
 
     #name: string;
+    #outfile: string;
     #semanticHighlighting: boolean;
     #colors: Record<keyof T, ColorConstructor>;
     #workbenchColors: WorkbenchColors;
@@ -92,14 +95,6 @@ export class Theme<T extends Record<string, Color>> {
         },
     };
 
-    #outdir = () => {
-        return resolve(import.meta.dirname, "..", "..", "themes");
-    };
-
-    #outfile = () => {
-        return resolve(this.#outdir(), "test-color-theme.json");
-    };
-
     #generate = () => {
         const theme = {
             $schema: "vscode://schemas/color-theme",
@@ -113,9 +108,9 @@ export class Theme<T extends Record<string, Color>> {
         return JSON.stringify(theme, null, 4);
     };
 
-    save = async () => {
-        await mkdir(this.#outdir(), { recursive: true });
-        await writeFile(this.#outfile(), this.#generate());
+    save = async (outdir: string) => {
+        await mkdir(outdir, { recursive: true });
+        await writeFile(resolve(outdir, this.#outfile), this.#generate());
     };
 }
 

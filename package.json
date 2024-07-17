@@ -5,14 +5,13 @@
     "type": "module",
     "publisher": "mthierman",
     "exports": {
-        ".": "./build/theme.js",
-        "./test": "./test.js"
+        ".": "./dist/modules/theme.mjs"
     },
     "scripts": {
         "check": "tsc --noEmit",
         "build": "tsc",
-        "watch": "tsc && node --no-warnings=ExperimentalWarning build/scripts/watch.js",
-        "test": "tsc && node --no-warnings=ExperimentalWarning build/scripts/test.js"
+        "watch": "tsc && node --no-warnings=ExperimentalWarning dist/scripts/watch.js",
+        "test": "tsc && node --no-warnings=ExperimentalWarning dist/scripts/test.js"
     },
     "devDependencies": {
         "@types/node": "^20.14.11",

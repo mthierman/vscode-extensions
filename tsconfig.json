@@ -9,6 +9,6 @@
         "skipLibCheck": true,
         "rootDir": "src",
         "outDir": "dist"
-    },
-    "exclude": ["src/scripts"]
+    }
+    // "exclude": ["src/scripts"]
 }
