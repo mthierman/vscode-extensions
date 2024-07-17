@@ -8,10 +8,7 @@
         "vscode-extensions": "dist/scripts/cli.js"
     },
     "exports": {
-        ".": {
-            "types": "./dist/modules/theme.d.mts",
-            "default": "./dist/modules/theme.mjs"
-        }
+        ".": "./dist/modules/main.mjs"
     },
     "scripts": {
         "check": "tsc --noEmit",

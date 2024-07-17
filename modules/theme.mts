@@ -1,8 +1,7 @@
 import { ColorConstructor, ColorSpace, parse, serialize, sRGB } from "colorjs.io/fn";
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { namedColors } from "./color.mjs";
-import type { NamedColor, WorkbenchColors } from "./types.mjs";
+import type { NamedColor, WorkbenchColors } from "./type.mjs";
 
 type HexColor = string & { hexish?: unknown };
 type Color = { color: NamedColor | HexColor; alpha?: number };
@@ -115,4 +114,3 @@ export class Theme<T extends Record<string, Color>> {
 }
 
 const generateManifest = () => {};
-export { namedColors };

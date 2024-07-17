@@ -1,6 +1,6 @@
 import { ColorConstructor } from "colorjs.io/fn";
-import { namedColors } from "./color.mjs";
-import type { NamedColor, WorkbenchColors } from "./types.mjs";
+import { namedColors } from "./color.d.mts";
+import type { NamedColor, WorkbenchColors } from "./types.d.mts";
 type HexColor = string & {
     hexish?: unknown;
 };
