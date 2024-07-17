@@ -5,16 +5,16 @@
     "type": "module",
     "publisher": "mthierman",
     "bin": {
-        "vscode-extensions": "dist/cli.js"
+        "vscode-extensions": "dist/src/cli.js"
     },
     "exports": {
-        "./theme": "./dist/theme.mjs"
+        "./theme": "./dist/src/theme.mjs"
     },
     "scripts": {
         "check": "tsc --noEmit",
         "build": "tsc -b",
-        "watch": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/watch.js",
-        "test": "tsc -b && node --no-warnings=ExperimentalWarning build/tests/theme.js"
+        "watch": "tsc -b && node --no-warnings=ExperimentalWarning dist/scripts/watch.js",
+        "test": "tsc -b && node --no-warnings=ExperimentalWarning dist/tests/theme.js"
     },
     "devDependencies": {
         "@types/node": "^20.14.11",
