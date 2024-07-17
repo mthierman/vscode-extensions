@@ -149,9 +149,4 @@ export const namedColors = {
     yellow: "#ffff00",
     yellowgreen: "#9acd32",
 };
-
-export type NamedColor = keyof typeof namedColors;
-export type HexColor = `#${string}`;
-export type RGB = `rgb(${string})`;
-export type RGBA = `rgb(${string})`;
-export type Color = { color: NamedColor | HexColor | RGB | RGBA; alpha?: number };
+//# sourceMappingURL=colors.mjs.map

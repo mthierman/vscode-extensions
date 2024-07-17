@@ -1,5 +1,7 @@
-import { namedColors } from "./color.mjs";
+import type { Color, HexColor, NamedColor, RGB, RGBA } from "./colors.mjs";
+import { namedColors } from "./colors.mjs";
+import type { Mode, WorkbenchColors } from "./theme.mjs";
 import { Theme } from "./theme.mjs";
-import { Mode, NamedColor, WorkbenchColors } from "./type.mjs";
-export { Mode, NamedColor, namedColors, Theme, WorkbenchColors };
+export { namedColors, Theme };
+export type { Color, HexColor, Mode, NamedColor, RGB, RGBA, WorkbenchColors };
 //# sourceMappingURL=main.d.mts.map

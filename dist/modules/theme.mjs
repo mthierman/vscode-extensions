@@ -1,6 +1,7 @@
 import { ColorSpace, parse, serialize, sRGB } from "colorjs.io/fn";
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+const modes = ["Light", "Dark"];
 const parseColor = (color) => {
     const parsed = parse(color.color);
     if (color.alpha) {
