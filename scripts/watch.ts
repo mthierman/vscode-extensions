@@ -3,6 +3,7 @@ import { watch } from "node:fs/promises";
 import { resolve } from "node:path";
 import { stdin, stdout } from "node:process";
 import { createInterface } from "node:readline/promises";
+import { Theme } from "../src/theme.mjs";
 
 const watchFolder = resolve(import.meta.dirname, "..", "..", "src");
 

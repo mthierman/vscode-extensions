@@ -11,7 +11,7 @@
         "check": "tsc --noEmit",
         "build": "tsc -b",
         "watch": "tsc -b && node --no-warnings=ExperimentalWarning dist/scripts/watch.js",
-        "test": "tsc -b && node --no-warnings=ExperimentalWarning dist/scripts/test.js"
+        "test": "tsc -b && node --no-warnings=ExperimentalWarning dist/tests/theme.js"
     },
     "devDependencies": {
         "@types/node": "^20.14.11",
