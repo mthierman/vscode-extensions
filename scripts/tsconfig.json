@@ -1,5 +1,5 @@
 {
     "extends": "../tsconfig.base.json",
-    "include": ["**/*", "../schema/*.json", "../src/*.mts"],
-    "compilerOptions": {}
+    "include": ["**/*", "../schema/*.json"],
+    "compilerOptions": { "rootDir": ".", "outDir": "../build" }
 }
