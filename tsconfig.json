@@ -3,6 +3,7 @@
     "include": [],
     "references": [
         { "path": "./src" },
+        { "path": "./src/tsconfig.dist.json" },
         { "path": "./scripts" },
         { "path": "./tests" }
     ]
