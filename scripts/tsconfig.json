@@ -1,5 +1,5 @@
 {
-    "include": [".", "../schema/*.json"],
     "extends": "../tsconfig.base.json",
+    "include": [".", "../schema/*.json"],
     "compilerOptions": { "outDir": "../dist/scripts" }
 }
