@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import { stdin, stdout } from "node:process";
 import { createInterface } from "node:readline/promises";
 
-const watchFolder = resolve(import.meta.dirname, "..", "..", "src");
+const watchFolder = resolve(import.meta.dirname, "..", "..", "modules");
 
 function build() {
     console.clear();
