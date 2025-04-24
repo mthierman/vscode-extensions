@@ -4,12 +4,7 @@
     "private": true,
     "type": "module",
     "publisher": "mthierman",
-    "bin": {
-        "vscode-extensions": "dist/scripts/cli.js"
-    },
-    "exports": {
-        ".": "./dist/modules/main.mjs"
-    },
+    "exports": "./src/index.ts",
     "scripts": {
         "check": "tsc --noEmit",
         "build": "tsc -b",
