@@ -1,4 +1,12 @@
 {
-    "files": [],
-    "references": [{ "path": "./modules" }, { "path": "./scripts" }, { "path": "./tests" }]
+    "include": ["src/**/*"],
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "NodeNext",
+        "allowImportingTsExtensions": true,
+        "rewriteRelativeImportExtensions": true,
+        "verbatimModuleSyntax": true,
+        "strict": true,
+        "resolveJsonModule": true
+    }
 }
