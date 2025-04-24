@@ -1,6 +1,6 @@
 import schema from "../schema/generated/colors.json" with { type: "json" };
 
-const named_colors = {
+export const named_colors = {
     aliceblue: "#f0f8ff",
     antiquewhite: "#faebd7",
     aqua: "#00ffff",
