@@ -4,7 +4,12 @@ import schema from "../schema/generated/colors.json" with { type: "json" };
 // https://stackoverflow.com/questions/42584228/how-can-i-define-a-type-for-a-css-color-in-typescript
 
 type Color = `#${string}`;
-export const named_colors: Record<string, Color> = {
+
+interface NamedColors {
+    [key: string]: Color;
+}
+
+export const named_colors = {
     aliceblue: "#f0f8ff",
     antiquewhite: "#faebd7",
     aqua: "#00ffff",
@@ -154,6 +159,6 @@ export const named_colors: Record<string, Color> = {
     whitesmoke: "#f5f5f5",
     yellow: "#ffff00",
     yellowgreen: "#9acd32",
-};
+} satisfies NamedColors;
 
 export type WorkbenchColors = Partial<Record<keyof typeof schema.colors, Color>>;
