@@ -3,10 +3,10 @@ import schema from "../schema/generated/colors.json" with { type: "json" };
 // https://medium.com/@steve.alves2/how-to-type-hex-colors-in-typescript-3c3b9a32baa7
 // https://stackoverflow.com/questions/42584228/how-can-i-define-a-type-for-a-css-color-in-typescript
 
-export type Color = `#${string}`;
+export type HexColor = `#${string}`;
 
 export interface ColorList {
-    [key: string]: Color;
+    [key: string]: HexColor;
 }
 
 export const named_colors = {
@@ -161,4 +161,4 @@ export const named_colors = {
     yellowgreen: "#9acd32",
 } satisfies ColorList;
 
-export type WorkbenchColors = Partial<Record<keyof typeof schema.colors, Color>>;
+export type WorkbenchColors = Partial<Record<keyof typeof schema.colors, HexColor>>;
