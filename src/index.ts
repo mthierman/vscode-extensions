@@ -1,6 +1,7 @@
 import Color from "colorjs.io";
 import schema from "../schema/generated/colors.json" with { type: "json" };
 
+// https://code.visualstudio.com/api/references/theme-color
 // https://medium.com/@steve.alves2/how-to-type-hex-colors-in-typescript-3c3b9a32baa7
 // https://stackoverflow.com/questions/42584228/how-can-i-define-a-type-for-a-css-color-in-typescript
 
