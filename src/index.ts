@@ -1,3 +1,4 @@
+import Color from "colorjs.io";
 import schema from "../schema/generated/colors.json" with { type: "json" };
 
 // https://medium.com/@steve.alves2/how-to-type-hex-colors-in-typescript-3c3b9a32baa7
@@ -8,6 +9,26 @@ export type HexColor = `#${string}`;
 export interface ColorList {
     [key: string]: HexColor;
 }
+
+export const hex = (color: Color) => {
+    return color.to("srgb").toString({ format: "hex" }) as HexColor;
+};
+
+// https://iamkate.com/data/12-bit-rainbow/
+// export const twelve_bit = {
+//     dark_purple: new Color("#817"),
+//     pink: new Color("#a35"),
+//     red: new Color("#c66"),
+//     orange: new Color("#e94"),
+//     yellow: new Color("#ed0"),
+//     green: new Color("#9d5"),
+//     bright_green: new Color("#4d8"),
+//     teal: new Color("#2cb"),
+//     aqua: new Color("#0bc"),
+//     turquoise: new Color("#09c"),
+//     blue: new Color("#36b"),
+//     purple: new Color("#639"),
+// };
 
 export const named_colors = {
     aliceblue: "#f0f8ff",
